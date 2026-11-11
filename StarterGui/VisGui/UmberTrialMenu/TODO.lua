@@ -1,0 +1,5 @@
+
+
+
+
+script.Parent.Visible = false

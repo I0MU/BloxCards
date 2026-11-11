@@ -1,0 +1,5 @@
+
+
+
+
+return { RAREBUCKETCHANCE = 40 }

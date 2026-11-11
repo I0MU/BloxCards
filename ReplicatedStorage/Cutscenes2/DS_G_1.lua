@@ -1,0 +1,56 @@
+
+
+
+
+local replicatedStorage: ReplicatedStorage = game:GetService("ReplicatedStorage")
+local visualNovel = require(replicatedStorage.VisualNovel)
+
+return {
+	Play = function()
+		visualNovel.SetBattleBackground("LoomingSpire")
+
+		local v3 = visualNovel.CreateActor({ "rbxassetid://73583490478087" }, -0.2, 1)
+		local v4 = visualNovel.CreateActor({ "rbxassetid://102393979269840" }, -0.4, 1)
+
+		visualNovel.ChangeSong("Sleeping Giant", { TimePosition = 0 })
+		visualNovel.SetActorImage(v4, 2)
+		visualNovel.FlipActor(v4)
+		visualNovel.MoveActor(v3, 0.4, 2)
+		visualNovel.MoveActor(v4, 0.6, 2)
+		wait(2.1)
+		visualNovel.UnFlipActor(v4)
+		visualNovel.DisplayText("Nicholas", "Hey... Miss Dorovna?")
+		visualNovel.SetActorImage(v3, 3)
+		visualNovel.Emote(v3, "Confused", { -0.15, 0 })
+		visualNovel.DisplayText("The Sacrifice", "An odour of terror clings to you, dear. Is something the matter?")
+		visualNovel.DisplayText("Nicholas", "I've realised, us being so close to the spire...")
+		visualNovel.DisplayText("Nicholas", "What's about to happen is so much more real.")
+		visualNovel.DisplayText("Nicholas", "Are you sure you want to go through with your duty? It means you're gonna...")
+		visualNovel.SetActorImage(v3, 1)
+		visualNovel.DisplayText("The Sacrifice", "We all die eventually, dear; I'm grateful my death has such purpose. But you knew this would happen the moment you met me.")
+		visualNovel.DisplayText("Nicholas", "...")
+		visualNovel.ShakeActor(v4, v4.Position, 1, 0.03)
+		visualNovel.DisplayText("Nicholas", "It just ain't right.")
+		visualNovel.DisplayText("Nicholas", "Young lass like you, bred to be slaughtered like an animal.")
+		visualNovel.DisplayText("The Sacrifice", "I lived a good life, one my mother would be proud of.")
+		visualNovel.SetActorImage(v3, 3)
+		visualNovel.DisplayText("The Sacrifice", "It's no one's fault my blood pleases <b><i>The Foul One.</i></b>")
+		visualNovel.DisplayText("Nicholas", "...")
+		visualNovel.DisplayText("Nicholas", "...Our son’s gonna grow up not knowing who you are...")
+		visualNovel.SetActorImage(v3, 1)
+		visualNovel.DisplayText("The Sacrifice", "Sir. The spire beckons. Such dithering is unbecoming of a paraselene sage.")
+		visualNovel.DisplayText("Nicholas", "...No, you're right. It's my duty to keep you safe while you do yours.")
+		visualNovel.SetActorImage(v3, 2)
+		visualNovel.DisplayText("The Sacrifice", "I'm grateful for your concern, sir.")
+		visualNovel.SetActorImage(v3, 1)
+		visualNovel.MoveActor(v3, 1.4, 3)
+		wait(3.1)
+		visualNovel.FlipActor(v4)
+		wait(1)
+		visualNovel.MoveActor(v4, 0.7, 1)
+		wait(1.5)
+		visualNovel.MoveActor(v4, 1.4, 2)
+		wait(2)
+		visualNovel.EndCutscene()
+	end
+}

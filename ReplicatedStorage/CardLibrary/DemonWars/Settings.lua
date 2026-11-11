@@ -1,0 +1,5 @@
+
+
+
+
+return { InDemonWars = true }
